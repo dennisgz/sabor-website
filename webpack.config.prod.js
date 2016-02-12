@@ -21,7 +21,6 @@ module.exports = {
   },
   entry: {
     commons: [
-      "history",
       "jquery",
       "moment",
       "react",
@@ -32,8 +31,7 @@ module.exports = {
       "react-router",
       "react-router-redux",
       "redux",
-      "redux-thunk",
-      "scroll-behavior"
+      "redux-thunk"
     ],
     index: path.join(srcPath, "index.js")
   },

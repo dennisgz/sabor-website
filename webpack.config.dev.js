@@ -32,7 +32,6 @@ module.exports = {
   },
   entry: {
     commons: [
-      "history",
       "jquery",
       "moment",
       "react",
@@ -47,8 +46,7 @@ module.exports = {
       "redux-devtools-dock-monitor",
       "redux-devtools-log-monitor",
       "redux-thunk",
-      "redbox-react",
-      "scroll-behavior"
+      "redbox-react"
     ],
     index: [
       "eventsource-polyfill", // necessary for hot reloading with IE
