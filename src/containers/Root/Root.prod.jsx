@@ -1,14 +1,11 @@
 import React from 'react'
-import createHashHistory from 'history/lib/createHashHistory'
-import useScroll from 'scroll-behavior/lib/useSimpleScroll'
 import { Provider } from 'react-redux'
+import { hashHistory as history } from 'react-router'
 import configureStore from 'store/configureStore'
-import configureRoutes from './configureRoutes'
-
-const browserHistory = useScroll(createHashHistory)({ queryKey: false })
+import Routes from './Routes'
 
 export default (
-  <Provider store={ configureStore(browserHistory) }>
-    { configureRoutes(browserHistory) }
+  <Provider store={ configureStore(history) }>
+    <Routes history={ history } />
   </Provider>
 )

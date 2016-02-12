@@ -1,17 +1,14 @@
 import React from 'react'
-import createBrowserHistory from 'history/lib/createBrowserHistory' // have no idea which api version this will work in. fuck rackt.
-import useScroll from 'scroll-behavior/lib/useSimpleScroll'
 import { Provider } from 'react-redux'
+import { browserHistory as history } from 'react-router'
 import configureStore from 'store/configureStore'
-import configureRoutes from './configureRoutes'
+import Routes from './Routes'
 import DevTools from 'containers/DevTools'
 
-const browserHistory = useScroll(createBrowserHistory)()
-
 export default (
-  <Provider store={ configureStore(browserHistory) }>
+  <Provider store={ configureStore(history) }>
     <div>
-      { configureRoutes(browserHistory) }
+      <Routes history={ history } />
       <DevTools />
     </div>
   </Provider>

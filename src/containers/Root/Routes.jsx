@@ -10,7 +10,7 @@ import About from 'pages/About'
 import NotFound from 'pages/NotFound'
 
 
-export default function configureRoutes(history) {
+export default function Routes({ history }) {
   const App = ({ children }) => children
   return (
     <Router history={ history }>
