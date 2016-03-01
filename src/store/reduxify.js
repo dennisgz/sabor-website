@@ -16,9 +16,10 @@ import apply from 'toolbox/apply'
 export default function reduxify({ selector, actions, container }) {
 
   // the container will subscribe to Redux store updates
-  var mapStateToProps = (state) => ({
-    [selector]: state[selector]
-  })
+  if (selector)
+    var mapStateToProps = (state) => ({
+      [selector]: state[selector]
+    })
 
   // the container will be provided actions
   if (actions)
