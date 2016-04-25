@@ -1,0 +1,29 @@
+.coloured-backdrop
+  background radial-gradient(closest-side, rgb(255,102,102), white)
+
+.center
+  display inline-block
+  margin 0 auto
+
+.description
+  max-width 554px
+
+.event
+  &:hover
+    border 1px solid grey
+    cursor pointer
+
+.link
+  display inline-block
+
+.image
+  width 100%
+
+@media (min-width: 768px)
+  .image
+    width auto
+    transition all 1s
+    &:hover
+      cursor pointer
+      transition all 1s
+      transform:scale(1.1)

@@ -1,0 +1,31 @@
+.highlight
+  color blue
+
+.image
+  margin-top 10px
+  margin-bottom 10px
+  margin-right 20px
+  margin-left 20px
+  height 200px
+  background-size cover
+  background-position center
+  background-repeat no-repeat
+  transition all 1s
+  &:hover
+    cursor pointer
+    transition all 1s
+    transform:scale(1.1)
+
+.text
+  color white
+  text-shadow 1px 1px 2px black
+  text-transform uppercase
+  margin-right 100px
+  
+@media (min-width: 768px)
+  .image
+    transition all 1s
+    &:hover
+      cursor pointer
+      transition all 1s
+      transform:scale(1.05)
